@@ -1,4 +1,4 @@
-import Header from "./components/Header";
+import Header from "./components/header/Header";
 import { hind_siliguri } from "./fonts";
 import "./globals.css";
 
