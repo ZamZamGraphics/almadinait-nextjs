@@ -25,7 +25,7 @@ function Header() {
                     <li><Link href="/contactus">যোগাযোগ</Link></li>
                 </ul>
                 <div className="flex justify-end items-center gap-2 lg:gap-8">
-                    <div className="flex justify-center items-center p-1 rounded-xl bg-gray-100">
+                    <div className="hidden sm:flex justify-center items-center p-1 rounded-xl bg-gray-100">
                         <button className="flex flex-col items-start py-1 px-2 rounded-xl text-lime-500 bg-white shadow-sm">বাং</button>
                         <button className="flex flex-col items-start py-1 px-2 rounded-xl">EN</button>
                     </div>
