@@ -14,7 +14,7 @@ function HeroSection() {
                         </div>
                         <p className="text-xl">অভিজ্ঞ মেন্টর আর আপডেটেড কারিকুলাম নিয়ে আল-মদিনা আইটি ইনস্টিটিউট প্রস্তুত আপনার ক্যারিয়ার গড়ার অগ্রযাত্রায়। আমাদের ১০টিরও বেশি ট্রেন্ডি কোর্স থেকে আজই বেছে নিন আপনার পছন্দের কোর্স।</p>
                     </div>
-                    <button className="flex justify-center items-center gap-2 py-4 px-8 text-white bg-lime-500 rounded-lg shadow-md">
+                    <button className="flex justify-center items-center gap-2 py-4 px-8 text-white bg-lime-500 hover:bg-lime-600 rounded-lg shadow-md">
                         <FaPhoneVolume /> যোগাযোগ করুন
                     </button>
                 </div>

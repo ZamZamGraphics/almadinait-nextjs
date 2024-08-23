@@ -8,3 +8,10 @@
     background-image: url("../public/bg-background.png");
   }
 }
+
+@layer components {
+  .student-review {
+    @apply text-gray-200 py-32;
+    background-image: url("../public/images/student-review-bg.png");
+  }
+}

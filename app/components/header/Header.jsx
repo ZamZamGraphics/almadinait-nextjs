@@ -29,7 +29,7 @@ function Header() {
                         <button className="flex flex-col items-start py-1 px-2 rounded-xl text-lime-500 bg-white shadow-sm">বাং</button>
                         <button className="flex flex-col items-start py-1 px-2 rounded-xl">EN</button>
                     </div>
-                    <div className="flex justify-center items-center text-white bg-lime-500 rounded-xl shadow-md">
+                    <div className="flex justify-center items-center text-white bg-lime-500 hover:bg-lime-600 rounded-xl shadow-md">
                         <Link href="/verify" className="py-3 px-6">Verify</Link>
                     </div>
                 </div>
