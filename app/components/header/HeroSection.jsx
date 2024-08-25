@@ -1,6 +1,8 @@
 import heroImage from "@/public/images/hero-img-main.png";
+import { faGraduationCap, faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
-import { FaGraduationCap, FaPhoneVolume } from "react-icons/fa6";
+import Button from "../Button";
 
 function HeroSection() {
   return (
@@ -14,15 +16,13 @@ function HeroSection() {
                         </div>
                         <p className="text-xl">অভিজ্ঞ মেন্টর আর আপডেটেড কারিকুলাম নিয়ে আল-মদিনা আইটি ইনস্টিটিউট প্রস্তুত আপনার ক্যারিয়ার গড়ার অগ্রযাত্রায়। আমাদের ১০টিরও বেশি ট্রেন্ডি কোর্স থেকে আজই বেছে নিন আপনার পছন্দের কোর্স।</p>
                     </div>
-                    <button className="flex justify-center items-center gap-2 py-4 px-8 text-white bg-lime-500 hover:bg-lime-600 rounded-lg shadow-md">
-                        <FaPhoneVolume /> যোগাযোগ করুন
-                    </button>
+                    <Button icon={faPhoneVolume}>যোগাযোগ করুন</Button>
                 </div>
                 <div className="md:col-7">
                     <div className="flex items-center justify-center relative">
                         <Image src={heroImage} alt="Hero Image" />
                         <div className="absolute inline-flex flex-col items-center gap-4 text-center z-10 top-[6%] left-[35%] bg-white p-3 rounded-2xl shadow-xl">
-                            <FaGraduationCap className="text-lime-500 size-10"/>
+                            <FontAwesomeIcon icon={faGraduationCap} className="text-lime-500 size-10" />
                             <div>
                                 <h4 className="text-lime-500 text-3xl font-semibold">৬৫০০ +</h4>
                                 <span>মোট শিক্ষার্থী</span>

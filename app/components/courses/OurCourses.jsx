@@ -20,8 +20,8 @@ function OurCourses() {
                 <div key={course.id} className="col-6 sm:col-4 md:col-3 lg:col-2 mb-8">
                     <Link href="#">
                         <div className="group py-8 px-6 text-center flex flex-col justify-center items-center gap-4 bg-white hover:bg-lime-500 hover:text-white rounded-2xl shadow-md">
-                            <div className="size-16 p-4 flex flex-shrink-0 rounded-xl text-lime-500 bg-[#F2FAEB] group-hover:bg-white items-center justify-center">
-                                <FontAwesomeIcon icon={['fas', course.icon]} />
+                            <div className="size-16 flex flex-shrink-0 rounded-xl text-lime-500 bg-[#F2FAEB] group-hover:bg-white items-center justify-center">
+                                <FontAwesomeIcon icon={['fas', course.icon]} className="size-8" />
                             </div>
                             <p className="course-name">{course.name}</p>
                         </div>

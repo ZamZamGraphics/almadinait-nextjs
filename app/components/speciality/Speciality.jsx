@@ -1,4 +1,6 @@
-import { FaChalkboardUser, FaList, FaPersonChalkboard, FaPhoneVolume } from 'react-icons/fa6'
+import { faChalkboardUser, faList, faPersonChalkboard, faPhoneVolume } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import Button from '../Button'
 
 function Speciality() {
   return (
@@ -10,9 +12,7 @@ function Speciality() {
                         <h2 className="text-5xl font-bold text-gray-900 leading-tight">কেন আমরা সবার চেয়ে <span className="text-lime-500">এগিয়ে</span></h2>
                         <p>দেশ ও দেশের বাইরে বর্তমানে যে স্কিলগুলোর চাহিদা সবচেয়ে বেশি, সেসব দিয়েই সাজানো হয়েছে আমাদের কোর্স লিস্ট। এখান থেকে আপনার সুবিধামত অনলাইন বা অফলাইনে কোর্সে এনরোল করতে পারবেন যেকোনো সময়।</p>
                     </div>
-                    <button className="flex justify-center items-center gap-2 py-4 px-8 text-white bg-lime-500 hover:bg-lime-600 rounded-lg shadow-md">
-                        <FaPhoneVolume /> যোগাযোগ করুন
-                    </button>
+                    <Button icon={faPhoneVolume}>যোগাযোগ করুন</Button>
                 </div>
             </div>
             <div className='col-auto md:col-2'></div>
@@ -21,7 +21,7 @@ function Speciality() {
                     <div className="col-12 sm:col-6">
                         <div className="flex flex-col items-start mb-8 py-10 px-8 gap-8 rounded-2xl bg-white shadow-md">
                             <div className="size-14 flex flex-shrink-0 rounded-xl text-lime-500 bg-[#F2FAEB] items-center justify-center text-3xl">
-                                <FaPersonChalkboard />
+                                <FontAwesomeIcon icon={faPersonChalkboard} className='size-8' />
                             </div>
                             <div>
                                 <h5 className="mb-3 text-2xl font-semibold text-gray-900">দক্ষ ইন্সট্রাকটর</h5>
@@ -30,7 +30,7 @@ function Speciality() {
                         </div>
                         <div className="flex flex-col items-start mb-8 py-10 px-8 gap-8 rounded-2xl bg-white shadow-md">
                             <div className="size-14 flex flex-shrink-0 rounded-xl text-lime-500 bg-[#F2FAEB] items-center justify-center text-3xl">
-                                <FaList />
+                                <FontAwesomeIcon icon={faList} className='size-8' />
                             </div>
                             <div>
                                 <h5 className="mb-3 text-2xl font-semibold text-gray-900">সহজ কোর্স মডিউল</h5>
@@ -41,7 +41,7 @@ function Speciality() {
                     <div className="col-12 sm:col-6 self-center">
                         <div className="flex flex-col items-start mb-8 py-10 px-8 gap-8 rounded-2xl bg-white shadow-md">
                             <div className="size-14 flex flex-shrink-0 rounded-xl text-lime-500 bg-[#F2FAEB] items-center justify-center text-3xl">
-                                <FaChalkboardUser />
+                                <FontAwesomeIcon icon={faChalkboardUser} className='size-8' />
                             </div>
                             <div>
                                 <h5 className="mb-3 text-2xl font-semibold text-gray-900">মেধা যাচাই</h5>

@@ -1,14 +1,15 @@
 import aboutImage from "@/public/images/about-img.png";
+import { faGraduationCap, faPersonChalkboard, faSackDollar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
-import { FaGraduationCap, FaPersonChalkboard, FaSackDollar } from "react-icons/fa6";
 
 function Aboutus() {
   return (
     <div className="container">
         <div className="row">
             <div className="col-12 lg:col-5 xl:col-7 mb-6 flex justify-center items-center">
-                <Image src={aboutImage} alt="About Image" className="" />
+                <Image src={aboutImage} alt="About Image" />
             </div>
             <div className="col-12 lg:col-7 xl:col-5 mb-6 inline-flex flex-col items-start gap-12">
                 <div className="inline-flex flex-col items-start">
@@ -31,7 +32,7 @@ function Aboutus() {
                         <div className="col mb-6">
                             <div className="flex p-6 flex-col items-start gap-4 rounded-2xl bg-white shadow-md">
                                 <div className="size-14 flex flex-shrink-0 rounded-xl text-lime-500 bg-[#F2FAEB] items-center justify-center text-3xl">
-                                    <FaGraduationCap />
+                                    <FontAwesomeIcon icon={faGraduationCap} className="size-8" />
                                 </div>
                                 <div>
                                     <p className="text-3xl text-lime-500 font-bold">৭০০০+</p>
@@ -42,7 +43,7 @@ function Aboutus() {
                         <div className="col mb-6">
                             <div className="flex p-6 flex-col items-start gap-4 rounded-2xl bg-white shadow-md">
                                 <div className="size-14 flex flex-shrink-0 rounded-xl text-lime-500 bg-[#F2FAEB] items-center justify-center text-3xl">
-                                    <FaSackDollar />
+                                    <FontAwesomeIcon icon={faSackDollar} className="size-7" />
                                 </div>
                                 <div>
                                     <p className="text-3xl text-lime-500 font-bold">১৫০০+</p>
@@ -53,7 +54,7 @@ function Aboutus() {
                         <div className="col mb-6">
                             <div className="flex p-6 flex-col items-start gap-4 rounded-2xl bg-white shadow-md">
                                 <div className="size-14 flex flex-shrink-0 rounded-xl text-lime-500 bg-[#F2FAEB] items-center justify-center text-3xl">
-                                    <FaPersonChalkboard />
+                                    <FontAwesomeIcon icon={faPersonChalkboard} className="size-8" />
                                 </div>
                                 <div>
                                     <p className="text-3xl text-lime-500 font-bold">১০+</p>
