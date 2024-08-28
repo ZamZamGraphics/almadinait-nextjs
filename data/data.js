@@ -85,3 +85,75 @@ export const batches = [
         discountFee: 10000,
     },
 ]
+
+export const reviews = [
+    {
+        id: 1,
+        opinion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dolores, blanditiis culpa esse aut, voluptas, quo vitae odio labore officiis hic? Ipsam dignissimos rerum ducimus ad voluptates qui necessitatibus voluptatibus.",
+        avatar: "https://images.pexels.com/photos/25758/pexels-photo.jpg",
+        name:"Hablu Mia",
+        courseName: "Graphics Design",
+        batchNo: "320"
+    },
+    {
+        id: 2,
+        opinion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dolores, blanditiis culpa esse aut, voluptas, quo vitae odio labore officiis hic? Ipsam dignissimos rerum ducimus ad voluptates qui necessitatibus voluptatibus.",
+        avatar: "https://images.pexels.com/photos/25758/pexels-photo.jpg",
+        name:"Jamal Hosen",
+        courseName: "Web Design",
+        batchNo: "210"
+    },
+    {
+        id: 3,
+        opinion: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dolores, blanditiis culpa esse aut, voluptas, quo vitae odio labore officiis hic? Ipsam dignissimos rerum ducimus ad voluptates qui necessitatibus voluptatibus.",
+        avatar: "https://images.pexels.com/photos/25758/pexels-photo.jpg",
+        name:"Kamrul Islam",
+        courseName: "Office Application",
+        batchNo: "110"
+    }
+]
+
+export const teachers = [
+    {
+        id: 1,
+        name: "Monjure Elahi",
+        title:"CEO",
+        avatar: "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg",
+    },
+    {
+        id: 2,
+        name: "Shakhawat Hossain",
+        title:"CEO",
+        avatar: "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg",
+    },
+    {
+        id: 3,
+        name: "Mujtahid Shihab",
+        title:"Office Instructor",
+        avatar: "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg",
+    },
+    {
+        id: 4,
+        name: "Amir Hossain",
+        title:"Office Instructor",
+        avatar: "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg",
+    },
+    {
+        id: 5,
+        name: "Forhad Hosain",
+        title:"Instructor",
+        avatar: "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg",
+    },
+    {
+        id: 6,
+        name: "Toky",
+        title:"Digital Instructor",
+        avatar: "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg",
+    },
+    {
+        id: 7,
+        name: "Deluar Hossain",
+        title:"Web Instructor",
+        avatar: "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg",
+    },
+]

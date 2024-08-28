@@ -4,6 +4,7 @@ import OurCourses from "./components/courses/OurCourses";
 import HeroSection from "./components/header/HeroSection";
 import StudentReview from "./components/review/StudentReview";
 import Speciality from "./components/speciality/Speciality";
+import Teachers from "./components/teachers/Teachers";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <NewBatches />
       <Speciality />
       <StudentReview />
+      <Teachers />
     </>
   );
 }

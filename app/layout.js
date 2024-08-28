@@ -1,3 +1,4 @@
+import 'react-multi-carousel/lib/styles.css';
 import Header from "./components/header/Header";
 import { hind_siliguri } from "./fonts";
 import "./globals.css";
