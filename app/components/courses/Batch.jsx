@@ -18,7 +18,7 @@ function Batch({ batch }) {
           height={0}
           className="w-full rounded-t-2xl"
         />
-        <div className="flex p-3 flex-col justify-center items-start self-stretch gap-4">
+        <div className="flex p-3 lg:p-5 flex-col justify-center items-start self-stretch gap-4">
           <div className="flex flex-col items-start self-stretch gap-1">
             <h3 className="text-xl font-semibold text-gray-900">
               {batch.title}

@@ -1,9 +1,10 @@
+import { roboto } from "@/app/fonts"
 import { faLocationDot, faPhoneVolume } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 function Topbar() {
   return (
-    <div className="row text-base py-3.5">
+    <div className={`row text-base py-3.5 ${roboto.className}`}>
         <div className="md:col-6 flex items-start gap-8">
             <div className="flex items-center gap-2">
               <FontAwesomeIcon icon={faPhoneVolume} className="text-lime-500 size-4" />০১৭৩৬-৭২২৬২২
