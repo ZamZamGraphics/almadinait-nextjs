@@ -2,7 +2,6 @@ import Aboutus from "./components/about/Aboutus";
 import Community from "./components/community/Community";
 import NewBatches from "./components/courses/NewBatches";
 import OurCourses from "./components/courses/OurCourses";
-import Footer from "./components/footer/Footer";
 import Gallery from "./components/gallery/Gallery";
 import HeroSection from "./components/header/HeroSection";
 import Partners from "./components/partners/Partners";
@@ -25,7 +24,6 @@ export default function Home() {
       <hr className="container h-px my-32 bg-gray-200" />
       <Partners />
       <Community />
-      <Footer />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import 'react-multi-carousel/lib/styles.css';
+import Footer from './components/footer/Footer';
 import Header from "./components/header/Header";
 import { hind_siliguri } from "./fonts";
 import "./globals.css";
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
       <body className={hind_siliguri.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
