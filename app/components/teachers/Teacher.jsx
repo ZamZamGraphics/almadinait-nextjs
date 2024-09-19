@@ -3,7 +3,7 @@ import Image from 'next/image'
 function Teacher({name, title, avatar}) {
   return (
     <div className="m-2 sm:m-5">
-        <div className="flex flex-col items-center gap-2 md:gap-4 bg-white shadow-md rounded-xl transition-all ease-in-out hover:scale-105 hover:cursor-pointer">
+        <div className="flex flex-col items-center gap-2 md:gap-4 bg-white shadow-md rounded-xl scale-general hover:cursor-pointer">
             <Image 
                 src={avatar} 
                 className="rounded-t-xl"

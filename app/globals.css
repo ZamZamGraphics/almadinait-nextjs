@@ -14,6 +14,9 @@
     @apply text-gray-200 py-32;
     background-image: url("../public/images/student-review-bg.png");
   }
+  .scale-general {
+    @apply transition-all ease-in-out delay-150 duration-300 hover:translate-y-1 hover:scale-110;
+  }
 
   .slide {
     flex: 0 0 100%;
