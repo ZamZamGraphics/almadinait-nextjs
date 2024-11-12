@@ -38,8 +38,8 @@ function Header() {
           <div className="flex justify-end items-center gap-2 lg:gap-8">
             <SwitchLanguage />
             <div className="flex justify-center items-center text-white bg-lime-500 hover:bg-lime-600 rounded-xl shadow-md">
-              <Link href="/verify" className="py-3 px-6">
-                Verify
+              <Link href="/verify" className="py-3 px-6 font-medium">
+                Verify Student
               </Link>
             </div>
           </div>
