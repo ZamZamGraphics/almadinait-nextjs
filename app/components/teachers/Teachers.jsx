@@ -27,14 +27,14 @@ function Teachers() {
   return (
     <div className="container my-32">
       <div className="grid grid-cols-1 justify-items-center">
-        <div className="w-full max-w-lg">
-          <h2 className="mb-5 text-5xl text-gray-900 font-bold leading-snug text-center">
+        <div className="w-full">
+          <h2 className="text-5xl text-gray-900 font-bold leading-snug text-center">
             আমাদের <span className="text-lime-500">শিক্ষক</span> মণ্ডলী
           </h2>
           <p className="mb-10 text-center">
-            দেশ ও দেশের বাইরে বর্তমানে যে স্কিলগুলোর চাহিদা সবচেয়ে বেশি, সেসব
-            দিয়েই সাজানো হয়েছে আমাদের কোর্স লিস্ট এখান থেকে আপনার সুবিধামত
-            অনলাইন.
+            আল-মদিনা আইটি ইন্সটিটিউট-এ আছেন ইন্ডাষ্ট্রি সেরা এক্সপার্ট মেন্টর
+            প্যানেল। যাদের তত্তাবধানে থেকে প্রশিক্ষনার্থীরা নিজেকে দক্ষ করে গড়ে
+            তোলে কর্মসংস্থানের সুযোগ তৈরী করছে।
           </p>
         </div>
       </div>
