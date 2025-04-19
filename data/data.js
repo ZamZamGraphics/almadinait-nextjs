@@ -145,7 +145,7 @@ export const teachers = [
   {
     id: 4,
     name: "Amir Hossain",
-    title: "Faculty OMC",
+    title: "Faculty OMC & Video Editing",
     avatar: "/mentor/amir.jpg",
   },
   {
@@ -199,8 +199,8 @@ export const teachers = [
   {
     id: 13,
     name: "Mohima Aktar",
-    title: "Counselor",
-    avatar: "/mentor/defualt.jpg",
+    title: "Office Admin",
+    avatar: "/mentor/mohima.jpg",
   },
   {
     id: 14,
