@@ -1,8 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
-    serverPath: "http://localhost:4000/",
-    imagePath: "https://server.almadinait.com/upload/",
+    serverPath: "http://localhost:4000/v1/api",
   },
   reactStrictMode: true,
   images: {

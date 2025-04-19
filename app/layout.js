@@ -1,7 +1,7 @@
-import 'react-multi-carousel/lib/styles.css';
-import Footer from './components/footer/Footer';
+import "react-multi-carousel/lib/styles.css";
+import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
-import { hind_siliguri } from "./fonts";
+import { roboto, noto_sans_bengali, hind_siliguri } from "./fonts";
 import "./globals.css";
 
 export const metadata = {
@@ -12,7 +12,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={hind_siliguri.className}>
+      <body
+        className={`${noto_sans_bengali.variable} ${hind_siliguri.variable}`}
+      >
         <Header />
         {children}
         <Footer />

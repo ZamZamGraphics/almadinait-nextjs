@@ -162,7 +162,7 @@ export const teachers = [
   },
   {
     id: 7,
-    name: "Ishmum Taqi",
+    name: "Ishmam Taqy",
     title: "Faculty Graphics & Frelancing",
     avatar: "/mentor/taqi.jpg",
   },
@@ -192,9 +192,9 @@ export const teachers = [
   },
   {
     id: 12,
-    name: "Mahmud Hasan",
+    name: "Mahmud Hasan Taneim",
     title: "Jr. Instructor OMC",
-    avatar: "/mentor/defualt.jpg",
+    avatar: "/mentor/mahmud.jpg",
   },
   {
     id: 13,
@@ -205,8 +205,8 @@ export const teachers = [
   {
     id: 14,
     name: "Afroza Sultana",
-    title: "Faculty Motion Graphic",
-    avatar: "/mentor/defualt.jpg",
+    title: "Faculty Motion Graphics",
+    avatar: "/mentor/afroza.jpg",
   },
   {
     id: 15,
@@ -219,5 +219,17 @@ export const teachers = [
     name: "Sultan Mahmud",
     title: "Web Developer",
     avatar: "/mentor/sultan.jpg",
+  },
+  {
+    id: 17,
+    name: "Tihan Miah",
+    title: "Jr. Instructor OMC",
+    avatar: "/mentor/tihan.jpg",
+  },
+  {
+    id: 18,
+    name: "Tamim Ahmed",
+    title: "Instructor POD",
+    avatar: "/mentor/tamim.jpg",
   },
 ];

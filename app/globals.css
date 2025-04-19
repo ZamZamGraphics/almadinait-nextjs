@@ -5,7 +5,15 @@
 @layer base {
   body {
     @apply text-gray-500 text-lg;
+    font-family: var(--font-noto-sans-bengali);
     background-image: url("../public/bg-background.png");
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-hind-siliguri);
   }
 }
 
