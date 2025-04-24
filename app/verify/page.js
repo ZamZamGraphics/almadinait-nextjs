@@ -6,7 +6,7 @@ import StudentVerify from "../components/StudentVerify";
 const fatchStudent = async ({ studentId, batchNo }) => {
   try {
     const response = await fetch(
-      `${process.env.serverPath}/student?studentId=${studentId}&batchNo=${batchNo}`
+      `${process.env.SERVER_URL}/student?studentId=${studentId}&batchNo=${batchNo}`
     );
     return response.json();
   } catch (error) {

@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  env: {
-    serverPath: "http://localhost:4000/v1/api",
-  },
   reactStrictMode: true,
   images: {
     remotePatterns: [
