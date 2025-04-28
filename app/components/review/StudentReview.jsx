@@ -1,11 +1,9 @@
-"use client";
-import { reviews } from "@/data/data";
-import Autoplay from "embla-carousel-autoplay";
-import useEmblaCarousel from "embla-carousel-react";
+import { getAllReviews } from "@/lib/data";
+import ReviewCarousel from "../ReviewCarousel";
 import Review from "./Review";
 
-function StudentReview() {
-  const [emblaRef] = useEmblaCarousel({ loop: false }, [Autoplay()]);
+async function StudentReview() {
+  const reviews = await getAllReviews();
   return (
     <div className="student-review">
       <div className="container">
@@ -22,13 +20,13 @@ function StudentReview() {
           </div>
           <div className="col-12 md:col-2"></div>
           <div className="col-12 md:col-6">
-            <div className="overflow-hidden" ref={emblaRef}>
+            <ReviewCarousel>
               <div className="flex">
                 {reviews.map((review) => (
                   <Review key={review.id} review={review} />
                 ))}
               </div>
-            </div>
+            </ReviewCarousel>
           </div>
         </div>
       </div>

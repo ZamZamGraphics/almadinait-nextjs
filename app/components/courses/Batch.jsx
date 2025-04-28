@@ -1,15 +1,16 @@
-import {
-  faClock,
-  faUser,
-  faUsersLine,
-} from "@fortawesome/free-solid-svg-icons";
+import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
+import Link from "next/link";
 
 function Batch({ batch }) {
   return (
     <div className="mb-8 col-12 sm:col-6 md:col-4 xl:col-3">
-      <div className="bg-white rounded-2xl shadow-md">
+      <div className="bg-white relative rounded-2xl shadow-md">
+        <Link
+          className="absolute top-0 bottom-0 left-0 right-0 z-10"
+          href={`/batches/${batch.id}`}
+        ></Link>
         <Image
           src={batch.thumbnail}
           alt={batch.title}
@@ -33,26 +34,15 @@ function Batch({ batch }) {
               <FontAwesomeIcon icon={faClock} className="size-3" />{" "}
               {batch.classTime}
             </span>
-            <span className="flex text-sm items-center gap-1 py-1 px-2 bg-gray-200 text-gray-600 rounded-md">
-              <FontAwesomeIcon icon={faUsersLine} className="size-3" />{" "}
-              {batch.couta} সিট বাকি
-            </span>
           </div>
           <hr className="w-full h-px my-3 bg-gray-300" />
           <div className="flex items-center flex-col md:flex-row justify-between self-stretch">
-            <div className="flex items-center gap-1">
-              <FontAwesomeIcon
-                icon={faUser}
-                className="bg-gray-200 rounded-full p-1 size-5"
-              />
-              {batch.mentor}
-            </div>
-            <div className="flex items-center gap-1">
+            <span className="text-2xl font-semibold text-lime-500">
+              ৳{batch.discountFee}
+            </span>
+            <span className=" text-xl font-semibold">
               <del>৳{batch.courseFee}</del>
-              <span className="text-2xl font-semibold text-lime-500">
-                ৳{batch.discountFee}
-              </span>
-            </div>
+            </span>
           </div>
         </div>
       </div>
