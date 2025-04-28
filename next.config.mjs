@@ -9,15 +9,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "**.pexels.com",
-      },
-      {
-        protocol: "https",
         hostname: "server.almadinait.com",
-      },
-      {
-        protocol: "https",
-        hostname: "lh3.googleusercontent.com",
       },
     ],
   },
