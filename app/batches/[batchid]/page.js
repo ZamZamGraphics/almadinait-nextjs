@@ -1,24 +1,34 @@
+import { getSingleBatch } from "@/lib/data";
 import Image from "next/image";
 
-function BatchSinglePage() {
+async function BatchSinglePage({ params }) {
+  const { batchid } = params;
+  const batch = await getSingleBatch(batchid);
+
   return (
     <div className="container py-28">
       <div className="row">
         <div className="col-12 md:col-8">
           <h3 className="mb-5 text-5xl text-lime-500 font-bold leading-snug">
-            অফিস অ্যাপ্লিকেশন কোর্স
+            {batch.title}
           </h3>
-          <p className="mb-5">
-            পড়াশুনা, পার্ট টাইম চুকুরী, সরকারি-বেসরকারি, ছোট বড় বিভিন্ন ধরনের
-            কোম্পানি, ব্যবসা প্রতিষ্ঠান কিংবা বিদেশে চাকুরীর জন্যও কম্পিউটার
-            অফিস অ্যাপ্লিকেশন কোর্সটির বিকল্প নেই। উল্লেখ্য মাইক্রোসফট অফিস
-            অ্যাপ্লিকেশন এর রয়েছে অনেকগুলো ভার্সন এবং প্রতিটি ভার্সনেই রয়েছে
-            কম-বেশি পার্থক্য। এই কথা মাথায় রেখেই আমাদের কম্পিউটার অফিস
-            অ্যাপ্লিকেশন কোর্স-২০১৮ সিলেবাস সাজানো হয়েছে। এছাড়াও ইংরেজী ও বাংলা
-            দ্রুত টাইপের জন্য টিপস্ এন্ড ট্রিকস। যে কারণে একজন ব্যক্তি কম্পিউটার
-            অফিস অ্যাপ্লিকেশন কোর্সটি সম্পূর্ণ করে খুব সহজেই প্রতিটি ভার্সনে
-            অত্যন্ত দক্ষতার সাথে কাজ করতে পারবে।
-          </p>
+          <div className="flex gap-3 p-3 mb-5 rounded-md border border-gray-500 bg-gray-100">
+            <span>Batch No {batch.batchNo}</span>
+            <span>Class Time {batch.classTime}</span>
+            <span>Mentor {batch.mentor}</span>
+            <span>
+              <del>Course Fee {batch.courseFee}</del>
+            </span>
+            <span>Discount Fee {batch.discountFee}</span>
+          </div>
+          <div
+            dangerouslySetInnerHTML={{ __html: batch.content }}
+            className="mb-5"
+          />
+          <div
+            dangerouslySetInnerHTML={{ __html: batch.excerpt }}
+            className="mb-8 p-6 shadow-md border border-sky-200 text-sky-900 bg-sky-100 rounded-lg"
+          />
           <div className="ms-5">
             <ul className="list-disc">
               <li>Microsoft Word</li>
@@ -33,10 +43,10 @@ function BatchSinglePage() {
         </div>
         <div className="col-12 md:col-4">
           <Image
-            src="/courses/office.jpg"
+            src={batch.thumbnail}
             width={500}
             height={50}
-            alt="Office Application"
+            alt={batch.title}
             className="rounded-lg"
           />
         </div>

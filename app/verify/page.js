@@ -1,18 +1,8 @@
 "use client";
+import { fatchStudent } from "@/lib/data";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import StudentVerify from "../components/StudentVerify";
-
-const fatchStudent = async ({ studentId, batchNo }) => {
-  try {
-    const response = await fetch(
-      `${process.env.SERVER_URL}/student?studentId=${studentId}&batchNo=${batchNo}`
-    );
-    return response.json();
-  } catch (error) {
-    return error;
-  }
-};
 
 function Verify() {
   const [student, setStudent] = useState(null);

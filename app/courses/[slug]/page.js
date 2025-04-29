@@ -1,7 +1,8 @@
 import Image from "next/image";
 
 function CourseName({ params }) {
-  const { courseid } = params;
+  const { slug } = params;
+  console.log(slug);
   return (
     <div className="container py-28">
       <div className="row">
