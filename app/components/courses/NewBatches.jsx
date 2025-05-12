@@ -1,4 +1,5 @@
 import { getAllBatches } from "@/lib/data";
+import NoDataFound from "../NoDataFound";
 import Batch from "./Batch";
 
 async function NewBatches() {
@@ -9,9 +10,11 @@ async function NewBatches() {
         নতুন <span className="text-lime-500">ব্যাচ</span> শুরু
       </h2>
       <div className="row">
-        {batches.map((batch) => (
-          <Batch key={batch.id} batch={batch} />
-        ))}
+        {batches.length > 0 ? (
+          batches.map((batch) => <Batch key={batch.id} batch={batch} />)
+        ) : (
+          <NoDataFound>{batches?.error || "No Data Found"}</NoDataFound>
+        )}
       </div>
     </div>
   );

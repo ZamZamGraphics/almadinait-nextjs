@@ -2,9 +2,12 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
-    const res = await fetch(`${process.env.API_URL}/courses?_embed`, {
-      cache: "no-store",
-    });
+    const res = await fetch(
+      `${process.env.API_URL}/courses?_embed&per_page=100`,
+      {
+        cache: "no-store",
+      }
+    );
     const data = await res.json();
 
     const mapedData = data.map((course) => {

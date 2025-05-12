@@ -2,9 +2,12 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   try {
-    const res = await fetch(`${process.env.API_URL}/batches?_embed`, {
-      cache: "no-store",
-    });
+    const res = await fetch(
+      `${process.env.API_URL}/batches?_embed&per_page=100`,
+      {
+        cache: "no-store",
+      }
+    );
     const data = await res.json();
 
     const mapedData = data.map((batch) => {
@@ -24,7 +27,7 @@ export async function GET() {
         batchNo: batch.acf.batch_number,
         classTime: batch.acf.class_time,
         mentor: batch.acf.mentor,
-        courseFee: batch.acf.course_fee,
+        courseFee: batch.acf.course_fee_offline,
         discountFee: batch.acf.discount_fee,
       };
     });

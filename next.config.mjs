@@ -9,7 +9,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "server.almadinait.com",
+        hostname: "*.almadinait.com",
       },
     ],
   },

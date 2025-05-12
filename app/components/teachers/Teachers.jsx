@@ -1,5 +1,6 @@
 import { getAllMentors } from "@/lib/data";
 import CarouselComponent from "../CarouselComponent";
+import NoDataFound from "../NoDataFound";
 import Teacher from "./Teacher";
 
 async function Teachers() {
@@ -19,14 +20,18 @@ async function Teachers() {
         </div>
       </div>
       <CarouselComponent>
-        {mentors.map((mentor) => (
-          <Teacher
-            key={mentor.id}
-            name={mentor.name}
-            title={mentor.title}
-            avatar={mentor.avatar}
-          />
-        ))}
+        {mentors.length > 0 ? (
+          mentors.map((mentor) => (
+            <Teacher
+              key={mentor.id}
+              name={mentor.name}
+              title={mentor.title}
+              avatar={mentor.avatar}
+            />
+          ))
+        ) : (
+          <NoDataFound>{mentors?.error || "No Data Found"}</NoDataFound>
+        )}
       </CarouselComponent>
     </div>
   );

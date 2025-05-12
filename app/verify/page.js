@@ -25,6 +25,12 @@ function Verify() {
       } else {
         setStudent(response.student);
       }
+      if (response?.error) {
+        setError("root.random", {
+          type: "random",
+          message: response.error,
+        });
+      }
     } catch (error) {
       setError("root.random", {
         type: "random",
@@ -122,17 +128,19 @@ function Verify() {
           </form>
         )}
       </div>
-      <div className="flex items-center justify-center">
-        <button
-          className="py-1 px-5 bg-orange-300 text-gray-900 rounded-full text-sm"
-          onClick={() => {
-            setStudent(null);
-            reset();
-          }}
-        >
-          Back
-        </button>
-      </div>
+      {student && (
+        <div className="flex items-center justify-center">
+          <button
+            className="py-1 px-5 bg-orange-300 text-gray-900 rounded-full text-sm"
+            onClick={() => {
+              setStudent(null);
+              reset();
+            }}
+          >
+            Back
+          </button>
+        </div>
+      )}
     </div>
   );
 }

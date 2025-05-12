@@ -9,7 +9,7 @@ import StudentReview from "./components/review/StudentReview";
 import Speciality from "./components/speciality/Speciality";
 import Teachers from "./components/teachers/Teachers";
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <HeroSection />

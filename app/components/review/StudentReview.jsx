@@ -1,4 +1,5 @@
 import { getAllReviews } from "@/lib/data";
+import NoDataFound from "../NoDataFound";
 import ReviewCarousel from "../ReviewCarousel";
 import Review from "./Review";
 
@@ -22,9 +23,13 @@ async function StudentReview() {
           <div className="col-12 md:col-6">
             <ReviewCarousel>
               <div className="flex">
-                {reviews.map((review) => (
-                  <Review key={review.id} review={review} />
-                ))}
+                {reviews.length > 0 ? (
+                  reviews.map((review) => (
+                    <Review key={review.id} review={review} />
+                  ))
+                ) : (
+                  <NoDataFound>{reviews?.error || "No Data Found"}</NoDataFound>
+                )}
               </div>
             </ReviewCarousel>
           </div>
