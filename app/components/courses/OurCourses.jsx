@@ -25,7 +25,7 @@ async function OurCourses() {
               key={course.id}
               className="col-6 sm:col-4 md:col-3 lg:col-2 mb-8"
             >
-              <div className="group py-8 px-6 text-center flex flex-col justify-center items-center gap-4 bg-white hover:bg-lime-500 hover:text-white scale-general rounded-2xl shadow-md">
+              <div className="group py-8 px-6 text-center flex flex-col justify-center items-center gap-4 border border-gray-200 bg-white hover:bg-lime-500 hover:text-white rounded-2xl transition-all ease-in-out delay-75 duration-200 cursor-pointer">
                 <div className="size-16 flex flex-shrink-0 rounded-xl text-lime-500 bg-[#F2FAEB] group-hover:bg-white items-center justify-center">
                   <FontAwesomeIcon
                     icon={["fas", course.icon]}

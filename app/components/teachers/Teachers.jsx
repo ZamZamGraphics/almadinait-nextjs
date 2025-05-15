@@ -25,7 +25,7 @@ async function Teachers() {
             <Teacher
               key={mentor.id}
               name={mentor.name}
-              title={mentor.title}
+              title={mentor.designation}
               avatar={mentor.avatar}
             />
           ))
