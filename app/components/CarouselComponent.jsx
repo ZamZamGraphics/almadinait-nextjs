@@ -21,6 +21,38 @@ const responsive = {
   },
 };
 
+const CustomLeftArrow = ({ onClick, ...rest }) => {
+  const {
+    onMove,
+    carouselState: { currentSlide, deviceType },
+  } = rest;
+  // onMove means if dragging or swiping in progress.
+  return (
+    <button
+      aria-label="Go to previous slide"
+      class="react-multiple-carousel__arrow left-0 before:content-['\e824'] "
+      type="button"
+      onClick={() => onClick()}
+    />
+  );
+};
+
+const CustomRightArrow = ({ onClick, ...rest }) => {
+  const {
+    onMove,
+    carouselState: { currentSlide, deviceType },
+  } = rest;
+  // onMove means if dragging or swiping in progress.
+  return (
+    <button
+      aria-label="Go to next slide"
+      class="react-multiple-carousel__arrow right-0 before:content-['\e825'] "
+      type="button"
+      onClick={() => onClick()}
+    />
+  );
+};
+
 function CarouselComponent({ children }) {
   return (
     <Carousel
@@ -31,6 +63,11 @@ function CarouselComponent({ children }) {
       autoPlaySpeed={2000}
       keyBoardControl={true}
       transitionDuration={1000}
+      containerClass="pb-10"
+      itemClass="px-3"
+      showDots={true}
+      customLeftArrow={<CustomLeftArrow />}
+      customRightArrow={<CustomRightArrow />}
     >
       {children}
     </Carousel>
