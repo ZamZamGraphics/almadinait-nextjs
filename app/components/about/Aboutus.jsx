@@ -13,7 +13,13 @@ function Aboutus() {
     <div className="container">
       <div className="row">
         <div className="col-12 lg:col-5 xl:col-7 mb-6 flex justify-center items-center">
-          <Image src={aboutImage} alt="About Image" />
+          <Image 
+          src={aboutImage} 
+          placeholder="blur" 
+          alt="About Image" 
+          width={550}
+          height={630}
+          />
         </div>
         <div className="col-12 lg:col-7 xl:col-5 mb-6 inline-flex flex-col items-start gap-12">
           <div className="inline-flex flex-col items-start">

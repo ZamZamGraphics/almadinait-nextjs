@@ -1,6 +1,8 @@
+import { getBlurData } from '@/lib/getBLurData'
 import Image from 'next/image'
 
-function Review({ review }) {
+async function Review({ review }) {
+    const blurDataURL = await getBlurData(review.avatar);
     return (
         <div className="slide review-slide flex flex-col p-8 items-center justify-center gap-6 rounded-2xl">
             <p className='text-base'>{review.opinion}</p>
@@ -13,6 +15,8 @@ function Review({ review }) {
                         width={100}
                         height={100}
                         quality={100}
+                        placeholder="blur"
+                        blurDataURL={blurDataURL}
                     />
                 </div>
                 <div className="flex flex-col items-start justify-center self-stretch gap-0">

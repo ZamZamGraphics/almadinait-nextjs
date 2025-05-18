@@ -30,7 +30,7 @@ const CustomLeftArrow = ({ onClick, ...rest }) => {
   return (
     <button
       aria-label="Go to previous slide"
-      class="react-multiple-carousel__arrow left-0 before:content-['\e824'] "
+      className="react-multiple-carousel__arrow left-0 before:content-['\e824'] "
       type="button"
       onClick={() => onClick()}
     />
@@ -46,7 +46,7 @@ const CustomRightArrow = ({ onClick, ...rest }) => {
   return (
     <button
       aria-label="Go to next slide"
-      class="react-multiple-carousel__arrow right-0 before:content-['\e825'] "
+      className="react-multiple-carousel__arrow right-0 before:content-['\e825'] "
       type="button"
       onClick={() => onClick()}
     />

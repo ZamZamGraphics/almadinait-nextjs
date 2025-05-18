@@ -9,6 +9,8 @@ import StudentReview from "./components/review/StudentReview";
 import Speciality from "./components/speciality/Speciality";
 import Teachers from "./components/teachers/Teachers";
 
+export const revalidate = 3600; // Revalidate every hour for all fetch requests
+
 export default async function Home() {
   return (
     <>

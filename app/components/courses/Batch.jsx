@@ -1,9 +1,11 @@
+import { getBlurData } from "@/lib/getBLurData";
 import { faClock } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 
-function Batch({ batch }) {
+async function Batch({ batch }) {
+  const blurDataURL = await getBlurData(batch.thumbnail)
   return (
     <div className="mb-8 col-12 sm:col-6 md:col-4 xl:col-3">
       <div className="bg-white relative rounded-2xl shadow-md">
@@ -15,9 +17,11 @@ function Batch({ batch }) {
           src={batch.thumbnail}
           alt={batch.title}
           quality={100}
-          width={500}
-          height={0}
+          width={350}
+          height={220}
           className="w-full rounded-t-2xl"
+          placeholder="blur"
+          blurDataURL={blurDataURL}
         />
         <div className="flex p-3 lg:p-5 flex-col justify-center items-start self-stretch gap-4">
           <div className="flex flex-col items-start self-stretch gap-1">

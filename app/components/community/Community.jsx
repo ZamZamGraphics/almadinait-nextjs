@@ -1,6 +1,7 @@
 import { roboto } from "@/app/fonts";
 import Image from "next/image";
 import Link from "next/link";
+import groupImage from "@/public/groupimages.jpg"
 
 function Community() {
   return (
@@ -8,11 +9,12 @@ function Community() {
       <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start bg-lime-500 text-white rounded-3xl">
         <div className="col-12 sm:col-4 md:col-5">
           <Image
-            width={800}
-            height={500}
-            src="/groupimages.jpg"
+            width={600}
+            height={350}
+            src={groupImage}
             className="rounded-t-3xl sm:rounded-l-3xl sm:rounded-tr-none"
-            alt=""
+            alt="Al Madina IT Community"
+            placeholder="blur"
           />
         </div>
         <div className="col-12 sm:col-8 md:col-7 p-5 md:pl-20 flex flex-col items-center md:items-start justify-center md:justify-start">

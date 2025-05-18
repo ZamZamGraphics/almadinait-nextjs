@@ -4,6 +4,7 @@ import CourseFee from "@/app/components/courses/CourseFee";
 import JobPosition from "@/app/components/courses/JobPosition";
 import Softwares from "@/app/components/courses/Softwares";
 import { getSingleBatch } from "@/lib/data";
+import { getBlurData } from "@/lib/getBLurData";
 import Image from "next/image";
 
 async function BatchSinglePage({ params }) {
@@ -11,6 +12,8 @@ async function BatchSinglePage({ params }) {
   const batch = await getSingleBatch(batchid);
   const courseCurriculum = batch.courseCurriculum.split(/\r?\n/);
   const jobPosition = batch.jobPosition.split(/\r?\n/);
+
+  const blurDataImage = await getBlurData(batch.thumbnail)
 
   return (
     <div className="container py-28">
@@ -31,9 +34,11 @@ async function BatchSinglePage({ params }) {
           <Image
             src={batch.thumbnail}
             width={800}
-            height={300}
+            height={500}
             alt={batch.title}
             className="rounded-3xl"
+            placeholder="blur"
+            blurDataURL={blurDataImage}
           />
         </div>
       </div>

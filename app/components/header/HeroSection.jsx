@@ -36,7 +36,13 @@ function HeroSection() {
         </div>
         <div className="md:col-7">
           <div className="flex items-center justify-center relative">
-            <Image src={heroImage} alt="Hero Image" />
+            <Image
+              src={heroImage}
+              placeholder="blur"
+              alt="Hero Image"
+              width={700}
+              height={580}
+            />
             <div className="absolute inline-flex flex-col items-center gap-4 text-center z-10 top-[6%] left-[35%] bg-white p-3 rounded-2xl shadow-xl">
               <FontAwesomeIcon
                 icon={faGraduationCap}
