@@ -15,10 +15,14 @@ export async function GET() {
             const imageUrl = featuredMedia?.[0]?.source_url;
             const mediaDetails = featuredMedia?.[0]?.media_details;
 
+            const terms = photo._embedded?.["wp:term"] || [];
+            const category = terms.find((t) => t[0]?.taxonomy === "category") || [];
+
             return {
                 id: photo.id,
                 title: photo.title.rendered,
                 content: photo.content.rendered,
+                category: category[0]?.name,
                 imageUrl: imageUrl,
                 sizes: mediaDetails.sizes,
             };

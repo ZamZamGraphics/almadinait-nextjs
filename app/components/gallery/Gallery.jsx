@@ -16,6 +16,7 @@ async function Gallery() {
                             galleries.map((photo) => (
                                 <GalleryImage
                                     key={photo.id}
+                                    id={photo.id}
                                     imageUrl={photo.imageUrl}
                                     title={photo.title}
                                     width={photo.sizes?.medium_large?.width}

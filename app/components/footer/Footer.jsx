@@ -20,7 +20,9 @@ function Footer() {
         <div className="row py-28">
           <div className="col-12 md:col-3 mb-5">
             <div className="flex flex-col items-start gap-8">
-              <Image src={footerImage} className="" alt="" />
+              <Link href="/">
+                <Image src={footerImage} className="" alt="" />
+              </Link>
               <p>Leading IT Institute in Brahmanbaria</p>
               <div className="flex items-center justify-end gap-6">
                 <span>
@@ -127,13 +129,13 @@ function Footer() {
           </div>
           <div className="col-12 md:col-6 flex items-center justify-center md:justify-end gap-2 md:gap-5 text-sm">
             <span>
-              <a href="#">Publisher Terms</a>
+              <Link href="#">Publisher Terms</Link>
             </span>
             <span>
-              <a href="#">Terms of Services</a>
+              <Link href="#">Terms of Services</Link>
             </span>
             <span>
-              <a href="#">Privacy & Policy</a>
+              <Link href="#">Privacy & Policy</Link>
             </span>
           </div>
         </div>
