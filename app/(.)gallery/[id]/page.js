@@ -10,7 +10,7 @@ async function GalleryModal({ params: { id } }) {
     <Modal>
       <Image
         src={photo.imageUrl}
-        className="transition w-auto max-h-full duration-200 group-hover:scale-110"
+        className="w-auto max-h-full"
         alt={photo.title}
         width={photo.sizes?.full?.width}
         height={photo.sizes?.full?.height}

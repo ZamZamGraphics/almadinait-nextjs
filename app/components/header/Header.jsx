@@ -17,18 +17,16 @@ function Header() {
               <Image src={logo} alt="Logo" />
             </Link>
           </div>
-          <ul className="md:flex items-center md:gap-2 lg:gap-5 xl:gap-8  hidden">
+          <ul className="md:flex items-center md:gap-2 lg:gap-5 xl:gap-8 hidden">
             <NavLink path="/" title="হোম" />
             <NavLink path="/about-us" title="আমাদের সম্পর্কে" />
-            <NavLink path="/courses" title="কোর্স সমূহ" />
-            <NavLink path="/freelancing" title="ফ্রিল্যান্সিং" />
             <NavLink path="/gallery" title="গ্যালারি" />
             <NavLink path="/contact-us" title="যোগাযোগ" />
+            <div className="flex justify-end items-center gap-2 lg:gap-8">
+              <SwitchLanguage />
+              <VerifyButton />
+            </div>
           </ul>
-          <div className="flex justify-end items-center gap-2 lg:gap-8">
-            <SwitchLanguage />
-            <VerifyButton />
-          </div>
         </nav>
       </div>
     </div>
