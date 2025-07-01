@@ -3,9 +3,7 @@ import NoDataFound from "../NoDataFound";
 import GalleryImage from "./GalleryImage";
 
 async function Gallery() {
-    const allGalleries = await getAllGalleries();
-    const specialGalleries = allGalleries.filter((gallery) => gallery.category === "Special")
-    const galleries = allGalleries.filter((gallery) => gallery.category !== "Special")
+    const { specialGalleries, galleries } = await getAllGalleries();
 
     return (
         <div className="container">
@@ -14,7 +12,7 @@ async function Gallery() {
             </h2>
             <div className="row">
                 <div className="col">
-                    {specialGalleries.length > 0 && (
+                    {specialGalleries?.length > 0 && (
                         <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
                             {specialGalleries.map((photo) => (
                                 <GalleryImage
@@ -22,22 +20,22 @@ async function Gallery() {
                                     id={photo.id}
                                     imageUrl={photo.imageUrl}
                                     title={photo.title}
-                                    width={photo.sizes?.medium_large?.width}
-                                    height={photo.sizes?.medium_large?.height}
+                                    width={photo.sizes?.width}
+                                    height={photo.sizes?.height}
                                 />
                             ))}
                         </div>
                     )}
                     <div className="columns-1 sm:columns-2 md:columns-3 mt-5 gap-4 space-y-4">
-                        {galleries.length > 0 ? (
+                        {galleries?.length > 0 ? (
                             galleries.map((photo) => (
                                 <GalleryImage
                                     key={photo.id}
                                     id={photo.id}
                                     imageUrl={photo.imageUrl}
                                     title={photo.title}
-                                    width={photo.sizes?.medium_large?.width}
-                                    height={photo.sizes?.medium_large?.height}
+                                    width={photo.sizes?.width}
+                                    height={photo.sizes?.height}
                                 />
                             ))
                         ) : (

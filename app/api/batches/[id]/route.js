@@ -4,9 +4,7 @@ import { NextResponse } from "next/server";
 export async function GET(request, { params }) {
   try {
     const { id } = await params;
-    const res = await fetch(`${process.env.API_URL}/batches/${id}?_embed`, {
-      cache: "no-store",
-    });
+    const res = await fetch(`${process.env.API_URL}/batches/${id}?_embed`);
     const data = await res.json();
 
     const featuredMedia = data._embedded["wp:featuredmedia"];

@@ -8,7 +8,7 @@ export const metadata = {
   title: "Al Madina IT | Freelancing IT Training Institute in Brahmanbaria",
   description: "Freelancing IT Training Institute in Brahmanbaria",
 };
-
+export const revalidate = 3600 // revalidate at most every hour
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

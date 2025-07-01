@@ -1,5 +1,6 @@
-import Image from "next/image";
 import Gallery from "../components/gallery/Gallery";
+import GroupImage from "@/public/groupimages.jpg"
+import Image from "next/image";
 
 function AboutUs() {
   return (
@@ -32,12 +33,12 @@ function AboutUs() {
         </div>
         <div className="col-12 md:col-6">
           <Image
-            src="/groupimages.jpg"
+            src={GroupImage}
             width={800}
             height={500}
             alt="Al-Madina IT Group Photo"
             className="rounded-2xl"
-            // placeholder="blur"
+            placeholder="blur"
           />
         </div>
       </div>
