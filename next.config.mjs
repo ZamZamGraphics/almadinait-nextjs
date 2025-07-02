@@ -1,3 +1,5 @@
+import withPlaiceholder from "@plaiceholder/next";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
@@ -13,6 +15,11 @@ const nextConfig = {
       },
     ],
   },
+  env: {
+    APP_URL: "http://localhost:3000",
+    API_URL: "https://api.almadinait.com/wp-json/wp/v2",
+    NEXT_PUBLIC_SERVER_URL: "http://localhost:4000/v1/api",
+  }
 };
 
-export default nextConfig;
+export default withPlaiceholder(nextConfig);
