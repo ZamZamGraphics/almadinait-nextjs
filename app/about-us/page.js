@@ -1,6 +1,7 @@
 import Gallery from "../components/gallery/Gallery";
 import GroupImage from "@/public/groupimages.jpg"
 import Image from "next/image";
+import Videos from "../components/videos/Videos";
 
 function AboutUs() {
   return (
@@ -42,6 +43,7 @@ function AboutUs() {
           />
         </div>
       </div>
+      <Videos />
       <Gallery />
     </div>
   );

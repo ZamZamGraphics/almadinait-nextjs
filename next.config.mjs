@@ -13,6 +13,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "*.almadinait.com",
       },
+      {
+        protocol: "https",
+        hostname: "img.youtube.com",
+      },
     ],
   },
   env: {
