@@ -6,6 +6,15 @@
 .pnp.js
 .yarn/install-state.gz
 
+.htaccess
+/account
+/api
+passenger.30152.log
+passenger.30152.pid.lock
+server.js
+/server
+/zamzamgraphics.com
+
 # testing
 /coverage
 
