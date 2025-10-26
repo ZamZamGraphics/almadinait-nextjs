@@ -1,15 +1,13 @@
-import Aboutus from "./components/about/Aboutus";
-import Community from "./components/community/Community";
-import NewBatches from "./components/courses/NewBatches";
-import OurCourses from "./components/courses/OurCourses";
-import Gallery from "./components/gallery/Gallery";
-import HeroSection from "./components/header/HeroSection";
-import Partners from "./components/partners/Partners";
-import StudentReview from "./components/review/StudentReview";
-import Speciality from "./components/speciality/Speciality";
-import Teachers from "./components/teachers/Teachers";
-
-export const revalidate = 3600; // Revalidate every hour for all fetch requests
+import HeroSection from "@/components/header/HeroSection";
+import OurCourses from "@/components/courses/OurCourses";
+import Aboutus from "@/components/about/Aboutus";
+// import NewBatches from "@/components/courses/NewBatches";
+import StudentReview from "@/components/review/StudentReview";
+import Speciality from "@/components/speciality/Speciality";
+import Teachers from "@/components/teachers/Teachers";
+// import Gallery from "@/components/gallery/Gallery";
+import Partners from "@/components/partners/Partners";
+import Community from "@/components/community/Community";
 
 export default async function Home() {
   return (
@@ -18,11 +16,11 @@ export default async function Home() {
       <OurCourses />
       <hr className="container h-px my-32 bg-gray-200" />
       <Aboutus />
-      <NewBatches />
+      {/* <NewBatches /> */}
       <Speciality />
       <StudentReview />
       <Teachers />
-      <Gallery />
+      {/* <Gallery /> */}
       <hr className="container h-px my-32 bg-gray-200" />
       <Partners />
       <Community />

@@ -2,7 +2,7 @@
 import { fatchStudent } from "@/lib/data";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import StudentVerify from "../components/StudentVerify";
+import StudentVerify from "@/components/StudentVerify";
 
 function Verify() {
   const [student, setStudent] = useState(null);
@@ -16,19 +16,19 @@ function Verify() {
 
   const submitForm = async (formData) => {
     try {
-      const response = await fatchStudent(formData);
-      if (response?.errors) {
+      const data = await fatchStudent(formData);
+      if (data?.errors) {
         setError("root.random", {
           type: "random",
-          message: response.errors.message,
+          message: data.errors.message,
         });
       } else {
-        setStudent(response.student);
+        setStudent(data);
       }
-      if (response?.error) {
+      if (data?.error) {
         setError("root.random", {
           type: "random",
-          message: response.error,
+          message: data.error,
         });
       }
     } catch (error) {
@@ -63,9 +63,8 @@ function Verify() {
                 name="studentId"
                 type="text"
                 placeholder="Enter Student ID"
-                className={`form-control md:py-3 md:px-4 md:text-2xl font-medium ${
-                  errors.studentId && "error"
-                }`}
+                className={`form-control md:py-3 md:px-4 md:text-2xl font-medium ${errors.studentId && "error"
+                  }`}
               />
               {errors.studentId && (
                 <p className="text-base text-red-600">
@@ -84,9 +83,8 @@ function Verify() {
                 name="batchNo"
                 type="text"
                 placeholder="Enter Batch Number"
-                className={`form-control md:py-3 md:px-4 md:text-2xl font-medium ${
-                  errors.batchNo && "error"
-                }`}
+                className={`form-control md:py-3 md:px-4 md:text-2xl font-medium ${errors.batchNo && "error"
+                  }`}
               />
               {errors.batchNo && (
                 <p className="text-base text-red-600">

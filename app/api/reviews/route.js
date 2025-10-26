@@ -10,12 +10,11 @@ export async function GET() {
       const imageUrl = featuredMedia?.[0]?.source_url;
 
       return {
-        id: revirw.id,
-        opinion: revirw.excerpt.rendered,
-        avatar: imageUrl,
-        name: revirw.title.rendered,
-        courseName: revirw.acf.course_name,
-        batchNo: revirw.acf.batch_number,
+        id: 1,
+        avatar: null,
+        name: "Md Fahim",
+        stat: 5,
+        opinion: "I wholeheartedly recommend every new student to pursue computer education at Al Madina IT. The training system, practical classes, and skilled instructors here will teach you in such a way that you will not only receive a certificate but also acquire real skills that can be applied in real life. From my own experience, I can say that the training I received has played a crucial role in shaping my career. If anyone wants to learn computer skills effectively, then Al Madina IT is the best choice for you!",
       };
     });
 

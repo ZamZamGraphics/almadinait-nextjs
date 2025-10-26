@@ -1,8 +1,8 @@
-import CourseCurriculum from "@/app/components/courses/CourseCurriculum";
-import CourseDuration from "@/app/components/courses/CourseDuration";
-import CourseFee from "@/app/components/courses/CourseFee";
-import JobPosition from "@/app/components/courses/JobPosition";
-import Softwares from "@/app/components/courses/Softwares";
+import CourseCurriculum from "../../../../almadinait-app/components/courses/CourseCurriculum";
+import CourseDuration from "../../../../almadinait-app/components/courses/CourseDuration";
+import CourseFee from "../../../../almadinait-app/components/courses/CourseFee";
+import JobPosition from "../../../../almadinait-app/components/courses/JobPosition";
+import Softwares from "../../../../almadinait-app/components/courses/Softwares";
 import { getSingleBatch } from "@/lib/data";
 import { getBlurData } from "@/lib/getBLurData";
 import Image from "next/image";

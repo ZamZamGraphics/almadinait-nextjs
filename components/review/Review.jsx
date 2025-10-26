@@ -1,8 +1,16 @@
+import defaultAvatar from "@/public/images/avatar.png";
 import { getBlurData } from '@/lib/getBLurData'
 import Image from 'next/image'
 
 async function Review({ review }) {
-    const blurDataURL = await getBlurData(review.avatar);
+
+    let blurProps = {}
+
+    if (review.avatar) {
+        const blurDataURL = await getBlurData(review.avatar)
+        blurProps = { placeholder: "blur", blurDataURL }
+    }
+
     return (
         <div className="slide review-slide flex flex-col p-8 items-center justify-center gap-6 rounded-2xl">
             <p className='text-base'>{review.opinion}</p>
@@ -10,20 +18,18 @@ async function Review({ review }) {
                 <div className='flex items-center size-12 rounded-full overflow-hidden'>
                     <Image
                         className=""
-                        src={review.avatar}
+                        src={review.avatar ? review.avatar : defaultAvatar}
                         alt={review.name}
                         width={100}
                         height={100}
                         quality={100}
-                        placeholder="blur"
-                        blurDataURL={blurDataURL}
+                        {...blurProps}
                     />
                 </div>
                 <div className="flex flex-col items-start justify-center self-stretch gap-0">
                     <h5 className='text-xl font-semibold text-white'>{review.name}</h5>
                     <div className='flex items-center self-stretch gap-3 text-sm'>
-                        <span>{review.courseName}</span>
-                        <span>Batch {review.batchNo}</span>
+                        <span>{review.star}</span>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import Gallery from "@/app/components/gallery/Gallery"
+import Gallery from "../../../almadinait-app/components/gallery/Gallery"
 
 function GalleryPage() {
     return (

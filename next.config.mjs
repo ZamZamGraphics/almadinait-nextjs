@@ -6,8 +6,12 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
+        protocol: "http",
+        hostname: "localhost",
+      },
+      {
         protocol: "https",
-        hostname: "*.almadinait.com",
+        hostname: "lh3.googleusercontent.com",
       },
       {
         protocol: "https",
