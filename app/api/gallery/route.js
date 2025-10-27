@@ -1,33 +1,40 @@
 import { NextResponse } from "next/server";
+import { imageSize } from 'image-size'
+import crypto from 'crypto';
+import path from 'path';
+import fs from 'fs';
+
+export function generateUUID() {
+    return crypto.randomUUID();
+}
 
 export async function GET() {
+    const publicDirPath = path.join(process.cwd(), 'public');
+    const imagesDirPath = path.join(publicDirPath, 'gallery'); // e.g., 'public/gallery'
+
     try {
-        const res = await fetch(`${process.env.API_URL}/gallery?_embed&per_page=100`);
-        const data = await res.json();
+        const filenames = await fs.promises.readdir(imagesDirPath);
 
-        if (data.length > 0) {
-            const mapedData = data.map((photo) => {
-                const featuredMedia = photo._embedded["wp:featuredmedia"];
-                const imageUrl = featuredMedia?.[0]?.source_url;
-                const mediaDetails = featuredMedia?.[0]?.media_details;
-
-                const terms = photo._embedded?.["wp:term"] || [];
-                const category = terms.find((t) => t[0]?.taxonomy === "category") || [];
+        const images = await Promise.all(
+            filenames.map(async (filename) => {
+                const imagePath = path.join(imagesDirPath, filename);
+                const fileBuffer = fs.readFileSync(imagePath);
+                const dimensions = imageSize(fileBuffer);
 
                 return {
-                    id: photo.id,
-                    title: photo.title.rendered,
-                    category: category[0]?.name,
-                    imageUrl: imageUrl,
-                    sizes: mediaDetails.sizes?.medium_large,
+                    id: generateUUID(),
+                    imageUrl: `/gallery/${filename}`, // Public URL for the image
+                    width: dimensions?.width,
+                    height: dimensions?.height,
                 };
-            });
-            return NextResponse.json(mapedData, { status: 200 });
-        }
-        return NextResponse.json([], { status: 200 });
-    } catch (err) {
+            })
+        );
+
+        return NextResponse.json(images, { status: 200 });
+    } catch (error) {
+        console.error('Failed to read image directory:', error);
         return NextResponse.json(
-            { error: "Internal Server Error" },
+            { error: 'Internal Server Error' },
             { status: 500 }
         );
     }
