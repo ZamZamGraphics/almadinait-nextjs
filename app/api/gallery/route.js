@@ -1,3 +1,4 @@
+import { getBlurData } from "@/lib/getBLurData";
 import { NextResponse } from "next/server";
 import { imageSize } from 'image-size'
 import crypto from 'crypto';
@@ -20,10 +21,12 @@ export async function GET() {
                 const imagePath = path.join(imagesDirPath, filename);
                 const fileBuffer = fs.readFileSync(imagePath);
                 const dimensions = imageSize(fileBuffer);
+                const blurDataURL = await getBlurData(`${process.env.APP_URL}/gallery/${filename}`);
 
                 return {
                     id: generateUUID(),
                     imageUrl: `/gallery/${filename}`, // Public URL for the image
+                    blurDataURL,
                     width: dimensions?.width,
                     height: dimensions?.height,
                 };

@@ -1,21 +1,36 @@
-// import { getBlurData } from "@/lib/getBLurData";
+'use client'
+import { useState } from 'react';
 import Image from 'next/image'
+import ClientGalleryModal from "./ClientGalleryModal";
 
-async function GalleryImage({ imageUrl, width, height }) {
-    // const blurDataURL = await getBlurData(imageUrl)
+function GalleryImage({ photo }) {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
-        <div className="overflow-hidden rounded-2xl group">
-            <Image
-                src={imageUrl}
-                className="w-full transition duration-200 group-hover:scale-110"
-                alt=""
-                width={width}
-                height={height}
-                quality={100}
-                // placeholder="blur"
-            // blurDataURL={blurDataURL}
+        <>
+            <div className="overflow-hidden rounded-2xl group">
+                <button onClick={() => setIsOpen(true)}>
+                    <Image
+                        src={photo.imageUrl}
+                        className="w-full transition duration-200 group-hover:scale-110"
+                        alt=""
+                        width={photo.width}
+                        height={photo.height}
+                        quality={100}
+                        placeholder="blur"
+                        blurDataURL={photo.blurDataURL}
+                    />
+                </button>
+            </div>
+            <ClientGalleryModal
+                isOpen={isOpen}
+                setIsOpen={setIsOpen}
+                imageUrl={photo.imageUrl}
+                width={photo.width}
+                height={photo.height}
+                blurURL={photo.blurDataURL}
             />
-        </div>
+        </>
     )
 }
 

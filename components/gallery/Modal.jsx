@@ -1,27 +1,27 @@
 'use client'
-import { useState } from 'react'
 import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react'
-import { useRouter } from 'next/navigation';
 
-function Modal({ children }) {
-    const [isOpen, setIsOpen] = useState(true);
-    const router = useRouter();
+function Modal({ children, isOpen, setIsOpen }) {
 
-    const onDismiss = () => router.back();
+    const closeModal = () => setIsOpen(false);
 
     return (
         <Dialog
+            as='div'
             open={isOpen}
-            onClose={onDismiss}
+            onClose={closeModal}
+            transition
             className="relative z-10"
         >
             <DialogBackdrop
-                className="fixed inset-0 bg-gray-900 backdrop-blur-md"
+                transition
+                className="fixed inset-0 bg-black/30 backdrop-blur-md transition-opacity duration-300 ease-out data-[closed]:opacity-0"
             />
             <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
                 <div className='relative w-full h-screen flex items-center justify-center'>
                     <DialogPanel
-                        className="absolute top-0 bottom-0 rounded-2xl bg-white shadow-xl overflow-hidden sm:my-8"
+                        transition
+                        className="absolute top-0 bottom-0 rounded-2xl bg-white shadow-xl overflow-hidden sm:my-8 transition duration-300 ease-out data-[closed]:opacity-0 data-[closed]:scale-95"
                     >
                         {children}
                     </DialogPanel>

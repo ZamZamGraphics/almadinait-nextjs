@@ -14,12 +14,7 @@ async function Gallery() {
                     {galleries?.length > 0 && (
                         <div className="columns-1 sm:columns-2 md:columns-3 gap-4 space-y-4">
                             {galleries.map((photo) => (
-                                <GalleryImage
-                                    key={photo?.id}
-                                    imageUrl={photo?.imageUrl}
-                                    width={photo?.width}
-                                    height={photo?.height}
-                                />
+                                <GalleryImage key={photo?.id} photo={photo} />
                             ))}
                         </div>
                     )}
