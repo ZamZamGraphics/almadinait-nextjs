@@ -21,7 +21,7 @@ export async function GET() {
                 const imagePath = path.join(imagesDirPath, filename);
                 const fileBuffer = fs.readFileSync(imagePath);
                 const dimensions = imageSize(fileBuffer);
-                const blurDataURL = await getBlurData(`${process.env.APP_URL}/gallery/${filename}`);
+                const blurDataURL = await getBlurData(imagePath);
 
                 return {
                     id: generateUUID(),
