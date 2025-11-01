@@ -1,6 +1,7 @@
 import defaultAvatar from "@/public/images/avatar.png";
 import { getBlurData } from '@/lib/getBLurData'
 import Image from 'next/image'
+import RatingStars from "../RatingStars";
 
 async function Review({ review }) {
 
@@ -29,7 +30,9 @@ async function Review({ review }) {
                 <div className="flex flex-col items-start justify-center self-stretch gap-0">
                     <h5 className='text-xl font-semibold text-white'>{review.name}</h5>
                     <div className='flex items-center self-stretch gap-3 text-sm'>
-                        <span>{review.star}</span>
+                        <span className="flex items-center gap-1">
+                            <RatingStars rating={review.star} />
+                        </span>
                     </div>
                 </div>
             </div>

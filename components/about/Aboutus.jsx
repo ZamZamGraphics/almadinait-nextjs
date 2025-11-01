@@ -39,7 +39,7 @@ function Aboutus() {
             </div>
           </div>
           <Link
-            href="#"
+            href="https://www.facebook.com/almadinait"
             className="py-3 px-6 rounded-lg border border-lime-500 hover:text-white hover:bg-lime-500"
           >
             আরো জানুন

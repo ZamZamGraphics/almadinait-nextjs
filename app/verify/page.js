@@ -22,14 +22,13 @@ function Verify() {
           type: "random",
           message: data.errors.message,
         });
-      } else {
-        setStudent(data);
-      }
-      if (data?.error) {
+      } else if (data?.error) {
         setError("root.random", {
           type: "random",
           message: data.error,
         });
+      } else {
+        setStudent(data);
       }
     } catch (error) {
       setError("root.random", {
