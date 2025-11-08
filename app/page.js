@@ -17,6 +17,7 @@ export default async function Home() {
       <hr className="container h-px my-32 bg-gray-200" />
       <Aboutus />
       {/* <NewBatches /> */}
+      <hr className="container h-px my-16 bg-gray-200" />
       <Speciality />
       <StudentReview />
       <Teachers />

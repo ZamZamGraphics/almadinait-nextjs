@@ -17,7 +17,7 @@ function Footer() {
   return (
     <div className="pt-28 md:pt-[150px] bg-slate-950 text-gray-400">
       <div className="container">
-        <div className="row py-28">
+        <div className="row py-16">
           <div className="col-12 md:col-3 mb-5">
             <div className="flex flex-col items-start gap-8">
               <Link href="/">
@@ -58,8 +58,7 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className="col-1"></div>
-          <div className="col-12 md:col-5 mb-5">
+          <div className="col-12 md:col-6 mb-5">
             <h4 className="text-2xl font-semibold text-white mb-5">
               কোর্স সমূহ
             </h4>
@@ -67,14 +66,18 @@ function Footer() {
               <ul className="flex flex-col items-start gap-2">
                 <li>অফিস অ্যাপ্লিকেশন</li>
                 <li>গ্রাফিক ডিজাইন ও ফ্রিল্যান্সিং</li>
-                <li>ফুলস্টাক ওয়েব ডেভোলপমেন্ট</li>
-                <li>ভিডিও এডিটিং ও মোশন গ্রাফিক্স</li>
+                <li>ডিজিটাল মার্কেটিং এন্ড ফ্রিল্যান্সিং</li>
+                <li>ফুলস্ট্যাক ওয়েব ডেভেলপমেন্ট</li>
+                <li>স্পোকেন ইংলিশ</li>
+                <li>বেসিক ইংলিশ (বিগিনার টু এডভান্স)</li>
               </ul>
               <ul className="flex flex-col items-start gap-2">
-                <li>হার্ডরওয়্যার এন্ড নেটওয়ার্কিং</li>
-                <li>অটোক্যাড</li>
+                <li>ডিপ্লোমা ইন কম্পিউটার</li>
+                <li>ভিডিও এডিটিং ও মোশন গ্রাফিক্স</li>
+                <li>হার্ডওয়্যার এন্ড নেটওয়ার্কিং</li>
+                <li>অটোক্যাড 2D & 3D</li>
                 <li>এডভান্স এক্সেল ও পাওয়ারপয়েন্ট</li>
-                <li>স্পোকেন ইংলিশ</li>
+                <li>কম্পিউটার ও ইন্টারনেট প্রো (ক্রাশ)</li>
               </ul>
             </div>
           </div>

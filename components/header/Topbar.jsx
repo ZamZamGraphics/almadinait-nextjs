@@ -1,9 +1,11 @@
 import { roboto } from "@/app/fonts";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import {
   faLocationDot,
   faPhoneVolume,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
 
 function Topbar() {
   return (
@@ -11,10 +13,12 @@ function Topbar() {
       <div className="col-12 sm:col-6 flex flex-col md:flex-row items-start gap-2 md:gap-8">
         <div className="flex items-center gap-2">
           <FontAwesomeIcon
-            icon={faPhoneVolume}
+            icon={faWhatsapp}
             className="text-lime-500 size-4"
           />
+          <Link href="https://wa.me/+8801736722622?text=Hi!">
           ০১৭৩৬-৭২২৬২২
+          </Link>
         </div>
         <div className="flex items-center gap-2">
           <FontAwesomeIcon

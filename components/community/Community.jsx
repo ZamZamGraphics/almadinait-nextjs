@@ -5,7 +5,7 @@ import groupImage from "@/public/groupimages.jpg"
 
 function Community() {
   return (
-    <div className={`container relative mb-[-160px] ${roboto.className}`}>
+    <div className={`container relative mb-[-120px] ${roboto.className}`}>
       <div className="flex flex-col sm:flex-row items-center justify-center sm:justify-start bg-lime-500 text-white rounded-3xl">
         <div className="col-12 sm:col-4 md:col-5">
           <Image
