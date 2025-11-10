@@ -1,4 +1,5 @@
 "use client";
+
 import { fatchStudent } from "@/lib/data";
 import { useState } from "react";
 import { useForm } from "react-hook-form";

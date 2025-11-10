@@ -1,4 +1,5 @@
 'use client'
+
 import { submitContact } from "@/app/actions";
 import { useEffect, useRef } from "react";
 import { useFormState, useFormStatus } from "react-dom";

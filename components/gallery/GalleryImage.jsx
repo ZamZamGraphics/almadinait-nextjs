@@ -5,7 +5,7 @@ import ClientGalleryModal from "./ClientGalleryModal";
 
 function GalleryImage({ photo }) {
     const [isOpen, setIsOpen] = useState(false);
-    const imageURL = `${process.env.NEXT_PUBLIC_APP_URL}${photo.imageUrl}`
+    const imageURL = `${process.env.NEXT_PUBLIC_BASE_URL}${photo.imageUrl}`
 
     return (
         <>
