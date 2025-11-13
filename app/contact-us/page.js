@@ -1,8 +1,8 @@
 'use client'
 
 import { submitContact } from "@/app/actions";
-import { useEffect, useRef } from "react";
-import { useFormState, useFormStatus } from "react-dom";
+import * as React from 'react';
+import { useFormStatus } from "react-dom";
 
 const initialState = {
     errors: {},
@@ -10,11 +10,11 @@ const initialState = {
 }
 
 function ContactUs() {
-    const formRef = useRef(null);
-    const [state, formAction] = useFormState(submitContact, initialState);
+    const formRef = React.useRef(null);
     const { pending } = useFormStatus();
+    const [state, formAction] = React.useActionState(submitContact, initialState);
 
-    useEffect(() => {
+    React.useEffect(() => {
         if (state.success && formRef.current) {
             formRef.current.reset();
         }

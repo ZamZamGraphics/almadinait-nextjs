@@ -40,8 +40,8 @@ function HeroSection() {
               src={heroImage}
               placeholder="blur"
               alt="Hero Image"
-              width={700}
-              height={580}
+              width="auto"
+              height="auto"
             />
             <div className="absolute inline-flex flex-col items-center gap-4 text-center z-10 top-[6%] left-[35%] bg-white p-3 rounded-2xl shadow-xl">
               <FontAwesomeIcon
