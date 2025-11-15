@@ -5,7 +5,7 @@ import Aboutus from "@/components/about/Aboutus";
 import StudentReview from "@/components/review/StudentReview";
 import Speciality from "@/components/speciality/Speciality";
 import Teachers from "@/components/teachers/Teachers";
-// import Gallery from "@/components/gallery/Gallery";
+import Gallery from "@/components/gallery/Gallery";
 import Partners from "@/components/partners/Partners";
 import Community from "@/components/community/Community";
 
@@ -21,7 +21,7 @@ export default async function Home() {
       <Speciality />
       <StudentReview />
       <Teachers />
-      {/* <Gallery /> */}
+      <Gallery />
       <hr className="container h-px my-32 bg-gray-200" />
       <Partners />
       <Community />

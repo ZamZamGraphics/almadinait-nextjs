@@ -1,6 +1,6 @@
+import SwiperSlider from "@/components/SwiperSlider";
 import { getAllReviews } from "@/lib/data";
 import NoDataFound from "../NoDataFound";
-import ReviewCarousel from "../ReviewCarousel";
 import Review from "./Review";
 
 async function StudentReview() {
@@ -21,17 +21,19 @@ async function StudentReview() {
           </div>
           <div className="col-12 md:col-2"></div>
           <div className="col-12 md:col-6">
-            <ReviewCarousel>
-              <div className="flex">
-                {reviews.length > 0 ? (
-                  reviews.map((review) => (
-                    <Review key={review.id} review={review} />
-                  ))
-                ) : (
-                  <NoDataFound>{reviews?.error || "No Data Found"}</NoDataFound>
-                )}
-              </div>
-            </ReviewCarousel>
+            <SwiperSlider
+              slidesPerView={1}
+              autoplayDelay={3000}
+              className="flex"
+            >
+              {reviews.length > 0 ? (
+                reviews.map((review) => (
+                  <Review key={review.id} review={review} />
+                ))
+              ) : (
+                <NoDataFound>{reviews?.error || "No Data Found"}</NoDataFound>
+              )}
+            </SwiperSlider>
           </div>
         </div>
       </div>
