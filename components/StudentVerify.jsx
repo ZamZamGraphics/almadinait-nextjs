@@ -1,8 +1,9 @@
+import { getImageUrl } from "@/lib/getImageUrl";
 import defaultAvatar from "@/public/images/avatar.png";
 import Image from "next/image";
 
 function StudentVerify({ student }) {
-  const studentAvatar = `${process.env.NEXT_PUBLIC_SERVER_URL}/upload/${student.avatar}`;
+  const studentAvatar = getImageUrl(student.avatar)
   return (
     <div className="w-full max-w-[800px] flex flex-col gap-10 p-5 md:p-10 bg-white rounded-2xl shadow-lg">
       <div className="flex flex-col md:flex-row justify-center items-center md:items-stretch gap-5">
