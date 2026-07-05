@@ -1,9 +1,10 @@
 import defaultAvatar from "@/public/images/avatar.png";
+import { getImageUrl } from "@/lib/getImageUrl";
 import { getBlurData } from "@/lib/getBLurData";
 import Image from "next/image";
 
 async function Teacher({ name, title, avatar }) {
-  const avatarUrl = `${process.env.API_URL}/upload/${avatar}`
+  const avatarUrl = getImageUrl(avatar)
   let blurProps = {}
 
   if (avatar) {

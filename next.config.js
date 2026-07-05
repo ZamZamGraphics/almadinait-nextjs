@@ -16,7 +16,7 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'server.almadinait.com',
+        hostname: 'pub-56f4ffd3fb84427f97be56c53a1c9b25.r2.dev',
         pathname: '/**',
       },
       {
