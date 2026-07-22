@@ -22,7 +22,7 @@ function ContactUs() {
 
     return (
         <div className='container py-28'>
-            <h2 className="mb-14 text-5xl text-gray-900 font-bold leading-snug text-center">
+            <h2 className="mb-14 text-2xl md:text-4xl text-gray-900 font-bold leading-snug text-center">
                 আমাদের সাথে যোগাযোগ
             </h2>
             <div className="row">

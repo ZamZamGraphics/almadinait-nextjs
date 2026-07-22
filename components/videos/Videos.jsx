@@ -10,7 +10,13 @@ const videos = [
 function Videos() {
   return (
     <div className='row'>
-      {videos.map((video) => <Video key={video.id} video={video} />)}
+      {videos.map((video) => {
+        return (
+          <div className='col-12 md:col-6 mb-10' key={video.id} >
+            <Video video={video} />
+          </div>
+        )
+      })}
     </div>
   )
 }

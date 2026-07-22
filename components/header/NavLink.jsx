@@ -2,12 +2,15 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
-function NavLink({ path, title }) {
+function NavLink({ path, title, setOpen }) {
     const pathname = usePathname();
     const active = pathname === path ? "text-lime-500 font-bold" : ""
     return (
         <li className={active}>
-            <Link href={path}>{title}</Link>
+            <Link
+                href={path}
+                onClick={() => setOpen(false)}
+            >{title}</Link>
         </li>
     )
 }

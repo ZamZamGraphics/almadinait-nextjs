@@ -1,3 +1,5 @@
+export const revalidate = 60;
+
 import { getBlurData } from "@/lib/getBLurData";
 import { NextResponse } from "next/server";
 import { imageSize } from 'image-size'

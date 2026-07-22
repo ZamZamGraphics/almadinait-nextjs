@@ -1,5 +1,7 @@
 'use client'
 import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlay } from "@fortawesome/free-solid-svg-icons";
 import Image from 'next/image'
 import { useState } from 'react'
 
@@ -12,9 +14,9 @@ function Video({ video }) {
 
     return (
         <>
-            <div className='col-12 md:col-6 mb-10' key={video.id}>
+            <div className='flex items-center justify-center'>
                 <button
-                    className='rounded-2xl overflow-hidden'
+                    className='relative rounded-2xl overflow-hidden'
                     onClick={open}
                 >
                     <Image
@@ -23,6 +25,15 @@ function Video({ video }) {
                         width={720}
                         height={400}
                     />
+                    <div className="absolute top-1/2 left-1/2 -translate-y-1/2 z-10 inline-flex items-center justify-center">
+                        <span className="absolute inline-flex h-full w-full rounded-full bg-lime-500 opacity-75 animate-ping"></span>
+                        <span className="relative inline-flex rounded-full h-12 w-12 bg-lime-600 items-center justify-center">
+                            <FontAwesomeIcon
+                                icon={faPlay}
+                                className='text-white'
+                            />
+                        </span>
+                    </div>
                 </button>
             </div>
             <Dialog open={isOpen} as="div" className="relative z-10 focus:outline-none" onClose={close}>

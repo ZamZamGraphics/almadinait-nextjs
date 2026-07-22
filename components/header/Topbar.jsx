@@ -9,7 +9,7 @@ import Link from "next/link";
 
 function Topbar() {
   return (
-    <div className={`row text-base py-3.5 ${roboto.className}`}>
+    <div className={`row hidden sm:flex text-base py-3.5 ${roboto.className}`}>
       <div className="col-12 sm:col-6 flex flex-col md:flex-row items-start gap-2 md:gap-8">
         <div className="flex items-center gap-2">
           <FontAwesomeIcon

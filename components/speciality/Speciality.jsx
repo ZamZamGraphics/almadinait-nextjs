@@ -15,7 +15,7 @@ function Speciality() {
         <div className="col-12 md:col-4 mb-8 self-center">
           <div className="flex flex-col items-start gap-12">
             <div className="flex flex-col items-start gap-6">
-              <h2 className="text-5xl font-bold text-gray-900 leading-tight">
+              <h2 className="text-2xl md:text-4xl font-bold text-gray-900 leading-tight">
                 কেন আমরা সবার চেয়ে{" "}
                 <span className="text-lime-500">এগিয়ে</span>
               </h2>

@@ -17,7 +17,17 @@ module.exports = {
       'xl': '1200px',
       '2xl': '1400px',
     },
-    extend: {},
+    extend: {
+      keyframes: {
+        'fade-in': {
+          '0%': { opacity: '0', transform: 'translateY(12px) scale(0.96)' },
+          '100%': { opacity: '1', transform: 'translateY(0) scale(1)' },
+        },
+      },
+      animation: {
+        'fade-in': 'fade-in 0.4s ease-out forwards',
+      },
+    },
   },
   plugins: [
     require('tw-bootstrap-grid-optimizer')

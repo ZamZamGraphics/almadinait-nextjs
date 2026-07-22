@@ -1,4 +1,3 @@
-import "react-multi-carousel/lib/styles.css";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import { noto_sans_bengali, hind_siliguri } from "./fonts";
